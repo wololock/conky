@@ -1,0 +1,79 @@
+# Conky settings #
+background yes
+update_interval 5
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+gap_x 180
+gap_y 120
+alignment top_right
+minimum_size 500 200
+maximum_width 500
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+#own_window_argb_visual yes
+#own_window_argb_value 0
+#border_margin 0
+#border_inner_margin 0
+#border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+#default_shade_color 555555
+draw_outline no 
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Raleway:size=10
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme #
+default_color FFFFFF
+#color0 62ACD1
+color0 002b42
+#color9 B8E7F5
+color9 97e5ff
+
+color1 FFFFFF
+color2 e0edf4
+color3 d7e7ef
+color4 cde0ea
+color5 c1d7e3
+color6 b5cfdc
+color7 aac6d5
+
+TEXT
+${color0}${font Raleway:weight=Light:size=18}BATTERY ${font Raleway:weight=Light:size=32}${color9}${battery_percent}% ${color0}${font Raleway:weight=Light:size=12}${battery_time}${font Raleway:weight=Light:size=20}
+
+${color0}${voffset -97}${goto 350}${font Raleway:weight=Light:size=18}TEMP ${color9}${font Raleway:weight=Light:size=32}$acpitemp ºC${color0}${font Raleway:weight=Light:size=20}
+
+${color0}
+${font Raleway:weight=Light:size=18}CPU ${font Raleway:weight=Light:size=32}${color9}${cpu cpu0}% ${color0}${font Raleway:weight=Light:size=20}
+${goto 50}${font Carlito:weight=Light:size=11}${color1}${top name 1} ${goto 250}${top pid 1} ${alignr}${top cpu 1}%
+${goto 50}${font Carlito:weight=Light:size=11}${color2}${top name 2} ${goto 250}${top pid 2} ${alignr}${top cpu 2}%
+${goto 50}${font Carlito:weight=Light:size=11}${color3}${top name 3} ${goto 250}${top pid 3} ${alignr}${top cpu 3}%
+${goto 50}${font Carlito:weight=Light:size=11}${color4}${top name 4} ${goto 250}${top pid 4} ${alignr}${top cpu 4}%
+${goto 50}${font Carlito:weight=Light:size=11}${color5}${top name 5} ${goto 250}${top pid 5} ${alignr}${top cpu 5}%
+${goto 50}${font Carlito:weight=Light:size=11}${color6}${top name 6} ${goto 250}${top pid 6} ${alignr}${top cpu 6}%
+${goto 50}${font Carlito:weight=Light:size=11}${color7}${top name 7} ${goto 250}${top pid 7} ${alignr}${top cpu 7}%
+
+${color0}
+${font Raleway:weight=Light:size=18}MEM ${font Raleway:weight=Light:size=32}${color9}$memperc% ${color0}${font Raleway:weight=Light:size=12}[$mem / $memmax]${font Raleway:weight=Light:size=20}
+${goto 50}${font Carlito:weight=Light:size=11}${color1}${top_mem name 1} ${goto 250}${top_mem pid 1} ${goto 350}${top_mem mem_res 1} ${alignr}${top_mem mem 1}%
+${goto 50}${font Carlito:weight=Light:size=11}${color2}${top_mem name 2} ${goto 250}${top_mem pid 2} ${goto 350}${top_mem mem_res 2} ${alignr}${top_mem mem 2}%
+${goto 50}${font Carlito:weight=Light:size=11}${color3}${top_mem name 3} ${goto 250}${top_mem pid 3} ${goto 350}${top_mem mem_res 3} ${alignr}${top_mem mem 3}%
+${goto 50}${font Carlito:weight=Light:size=11}${color4}${top_mem name 4} ${goto 250}${top_mem pid 4} ${goto 350}${top_mem mem_res 4} ${alignr}${top_mem mem 4}%
+${goto 50}${font Carlito:weight=Light:size=11}${color5}${top_mem name 5} ${goto 250}${top_mem pid 5} ${goto 350}${top_mem mem_res 5} ${alignr}${top_mem mem 5}%
+${goto 50}${font Carlito:weight=Light:size=11}${color6}${top_mem name 6} ${goto 250}${top_mem pid 6} ${goto 350}${top_mem mem_res 6} ${alignr}${top_mem mem 6}%
+${goto 50}${font Carlito:weight=Light:size=11}${color7}${top_mem name 7} ${goto 250}${top_mem pid 7} ${goto 350}${top_mem mem_res 7} ${alignr}${top_mem mem 7}%
+
+${color0}${font Raleway:weight=Light:size=18}SSD ${font Raleway:weight=Light:size=32}${color9}${fs_used_perc}% ${color0}${font Raleway:weight=Light:size=12}[${fs_used} / ${fs_size}]${font Raleway:weight=Light:size=20}
